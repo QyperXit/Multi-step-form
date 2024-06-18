@@ -1,3 +1,111 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/public/fonts/Ubuntu-Regular.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/public/fonts/Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/public/fonts/Ubuntu-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.regular-text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+.medium-text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+.bold-text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+/* Primary Colors */
+.bg-marine-blue {
+  background-color: hsl(213, 96%, 18%);
+}
+.text-marine-blue {
+  color: hsl(213, 96%, 18%);
+}
+
+.bg-purplish-blue {
+  background-color: hsl(243, 100%, 62%);
+}
+.text-purplish-blue {
+  color: hsl(243, 100%, 62%);
+}
+
+.bg-pastel-blue {
+  background-color: hsl(228, 100%, 84%);
+}
+.text-pastel-blue {
+  color: hsl(228, 100%, 84%);
+}
+
+.bg-light-blue {
+  background-color: hsl(206, 94%, 87%);
+}
+.text-light-blue {
+  color: hsl(206, 94%, 87%);
+}
+
+.bg-strawberry-red {
+  background-color: hsl(354, 84%, 57%);
+}
+.text-strawberry-red {
+  color: hsl(354, 84%, 57%);
+}
+
+/* Neutral Colors */
+.bg-cool-gray {
+  background-color: hsl(231, 11%, 63%);
+}
+.text-cool-gray {
+  color: hsl(231, 11%, 63%);
+}
+
+.bg-light-gray {
+  background-color: hsl(229, 24%, 87%);
+}
+.text-light-gray {
+  color: hsl(229, 24%, 87%);
+}
+
+.bg-magnolia {
+  background-color: hsl(217, 100%, 97%);
+}
+.text-magnolia {
+  color: hsl(217, 100%, 97%);
+}
+
+.bg-alabaster {
+  background-color: hsl(231, 100%, 99%);
+}
+.text-alabaster {
+  color: hsl(231, 100%, 99%);
+}
+
+.bg-white {
+  background-color: hsl(0, 0%, 100%);
+}
+.text-white {
+  color: hsl(0, 0%, 100%);
+}
