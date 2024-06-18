@@ -1,7 +1,12 @@
 import images from "index.js";
 import PersonalInfo from "./components/PersonalInfo.js";
+import { useMultiStepForm } from "./utils/useMultiStepForm.js";
 
 function App() {
+  const { steps, currentStepIndex } = useMultiStepForm([
+    <div>ONe</div>,
+    <div>two</div>,
+  ]);
   return (
     <section className=" bg-magnolia  sm:h-screen  grid sm:place-items-center">
       <div className="font-ubuntu sm:flex max-h-[568px] justify-center relative sm:p-4 bg-white rounded-xl">
@@ -9,7 +14,13 @@ function App() {
         <div className="sm:bg-[url('assets/images/bg-sidebar-desktop.svg')] bg-[url('assets/images/bg-sidebar-mobile.svg')]  sm:pt-8 px-5 pr-[min(6vw,10em)]  bg-no-repeat bg-cover bg-[position:50%_100%] sm:rounded-lg ">
           <div className=" flex sm:flex-col items-baseline pt-7 h-44 justify-center sm:gap-5">
             <div className="flex items-center gap-3">
-              <h2 className=" w-5 h-5 inline-flex items-center justify-center p-4 rounded-full bg-pastel-blue  font-bold text-sm">
+              <h2
+                className={` w-5 h-5 inline-flex items-center justify-center p-4 rounded-full  ${
+                  currentStepIndex + 1 === 1
+                    ? "bg-pastel-blue"
+                    : "bg-none text-white border"
+                }  font-bold text-sm `}
+              >
                 1
               </h2>
               <div>
@@ -22,7 +33,13 @@ function App() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <h2 className=" w-5 h-5 inline-flex items-center justify-center p-4 rounded-full border text-alabaster font-bold text-sm">
+              <h2
+                className={` w-5 h-5 inline-flex items-center justify-center p-4 rounded-full  ${
+                  currentStepIndex + 1 === 2
+                    ? "bg-pastel-blue"
+                    : "bg-none text-white border"
+                }  font-bold text-sm `}
+              >
                 2
               </h2>
               <div>
@@ -35,7 +52,13 @@ function App() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <h2 className=" w-5 h-5 inline-flex items-center justify-center p-4 rounded-full border text-alabaster font-bold text-sm">
+              <h2
+                className={` w-5 h-5 inline-flex items-center justify-center p-4 rounded-full  ${
+                  currentStepIndex + 1 === 3
+                    ? "bg-pastel-blue"
+                    : "bg-none text-white border"
+                }  font-bold text-sm `}
+              >
                 3
               </h2>
               <div>
@@ -48,7 +71,13 @@ function App() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <h2 className=" w-5 h-5 inline-flex items-center justify-center p-4 rounded-full border text-alabaster font-bold text-sm">
+              <h2
+                className={` w-5 h-5 inline-flex items-center justify-center p-4 rounded-full  ${
+                  currentStepIndex + 1 === 4
+                    ? "bg-pastel-blue"
+                    : "bg-none text-white border"
+                }  font-bold text-sm `}
+              >
                 4
               </h2>
               <div>
