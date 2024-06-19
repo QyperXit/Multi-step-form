@@ -1,5 +1,6 @@
 import images from "index.js";
 import PersonalInfo from "./components/PersonalInfo.js";
+import SelectPlan from "./components/SelectPlan.js";
 import { useMultiStepForm } from "./utils/useMultiStepForm.js";
 
 function App() {
@@ -92,7 +93,15 @@ function App() {
           </div>
         </div>
         {/* form */}
-        <PersonalInfo />
+        <div className="px-[min(6vw,10em)] mt-[min(2vw,4em)]  h-full  max-w-max ">
+          <form className=" flex flex-col gap-12  h-full sm:px-4">
+            {/* <PersonalInfo /> */}
+            <SelectPlan />
+            <button className=" mt-[min(5vw,4em)]  ml-auto bg-marine-blue hover:bg-blue-800 font-semibold text-white w-fit px-6 py-2 mb-2 rounded-md">
+              Next Step
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );
