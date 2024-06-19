@@ -10,7 +10,7 @@ function App() {
   ]);
   return (
     <section className=" bg-magnolia  sm:h-screen  grid sm:place-items-center">
-      <div className="font-ubuntu sm:flex max-h-[568px] justify-center relative sm:p-4 bg-white rounded-xl">
+      <div className="font-ubuntu sm:flex max-h-[568px] justify-center relative sm:p-4 sm:bg-white rounded-xl">
         {/* steps */}
         <div className="sm:bg-[url('assets/images/bg-sidebar-desktop.svg')] bg-[url('assets/images/bg-sidebar-mobile.svg')]  sm:pt-8 px-5 pr-[min(6vw,10em)]  bg-no-repeat bg-cover bg-[position:50%_100%] sm:rounded-lg ">
           <div className=" flex sm:flex-col items-baseline pt-7 h-44 justify-center sm:gap-5">
@@ -93,8 +93,8 @@ function App() {
           </div>
         </div>
         {/* form */}
-        <div className="px-[min(3vw,8em)] mt-[min(2vw,4em)]  h-full  max-w-max ">
-          <form className=" flex flex-col gap-12  h-full sm:px-4">
+        <div className="px-[min(3vw,8em)] mt-[min(2vw,4em)]  h-full mx-auto w-full  max-w[560px] sm:bg-transparent  bg-[#F0F8FF]">
+          <form className=" flex flex-col gap-12  w-full h-full sm:px-4">
             {/* <PersonalInfo /> */}
             <SelectPlan />
             <button className=" mt-[min(5vw,4em)]  ml-auto bg-marine-blue hover:bg-blue-800 font-semibold text-white w-fit px-6 py-2 mb-2 rounded-md">
