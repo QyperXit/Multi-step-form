@@ -1,4 +1,5 @@
 import images from "index.js";
+import Addons from "./components/Addons.js";
 import PersonalInfo from "./components/PersonalInfo.js";
 import SelectPlan from "./components/SelectPlan.js";
 import { useMultiStepForm } from "./utils/useMultiStepForm.js";
@@ -96,7 +97,8 @@ function App() {
         <div className="px-[min(3vw,8em)] mt-[min(2vw,4em)]  h-full mx-auto w-full  max-w[560px] sm:bg-transparent  mb-8 sm:mb-0 bg-[#F0F8FF]">
           <form className=" flex flex-col gap-12  w-full h-full sm:px-4">
             {/* <PersonalInfo /> */}
-            <SelectPlan />
+            {/* <SelectPlan /> */}
+            <Addons />
             <button className=" mt-[min(5vw,4em)]  ml-auto bg-marine-blue hover:bg-blue-800 font-semibold text-white w-fit px-6 py-2 mb-2 rounded-md">
               Next Step
             </button>
