@@ -93,7 +93,7 @@ function App() {
           </div>
         </div>
         {/* form */}
-        <div className="px-[min(6vw,10em)] mt-[min(2vw,4em)]  h-full  max-w-max ">
+        <div className="px-[min(3vw,8em)] mt-[min(2vw,4em)]  h-full  max-w-max ">
           <form className=" flex flex-col gap-12  h-full sm:px-4">
             {/* <PersonalInfo /> */}
             <SelectPlan />
