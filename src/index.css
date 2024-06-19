@@ -109,3 +109,9 @@
 .text-white {
   color: hsl(0, 0%, 100%);
 }
+
+@media (max-width: 639px) {
+  :root {
+    background-color: aliceblue;
+  }
+}

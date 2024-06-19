@@ -18,7 +18,7 @@ function App() {
               <h2
                 className={` w-5 h-5 inline-flex items-center justify-center p-4 rounded-full  ${
                   currentStepIndex + 1 === 1
-                    ? "bg-pastel-blue"
+                    ? "bg-pastel-blue text-marine-blue"
                     : "bg-none text-white border"
                 }  font-bold text-sm `}
               >
@@ -28,7 +28,7 @@ function App() {
                 <h2 className=" text-pastel-blue text-xs hidden sm:block">
                   STEP 1
                 </h2>
-                <h2 className="text-alabaster font-bold text-sm hidden sm:block">
+                <h2 className="text-alabaster font-bold text-sm hidden w-max sm:block">
                   YOUR INFO
                 </h2>
               </div>
@@ -37,7 +37,7 @@ function App() {
               <h2
                 className={` w-5 h-5 inline-flex items-center justify-center p-4 rounded-full  ${
                   currentStepIndex + 1 === 2
-                    ? "bg-pastel-blue"
+                    ? "bg-pastel-blue text-marine-blue"
                     : "bg-none text-white border"
                 }  font-bold text-sm `}
               >
@@ -47,7 +47,7 @@ function App() {
                 <h2 className=" text-pastel-blue text-xs hidden sm:block">
                   STEP 2
                 </h2>
-                <h2 className="text-alabaster font-bold text-sm hidden sm:block">
+                <h2 className="text-alabaster font-bold text-sm hidden w-max sm:block">
                   SELECT PLAN
                 </h2>
               </div>
@@ -56,7 +56,7 @@ function App() {
               <h2
                 className={` w-5 h-5 inline-flex items-center justify-center p-4 rounded-full  ${
                   currentStepIndex + 1 === 3
-                    ? "bg-pastel-blue"
+                    ? "bg-pastel-blue text-marine-blue"
                     : "bg-none text-white border"
                 }  font-bold text-sm `}
               >
@@ -75,7 +75,7 @@ function App() {
               <h2
                 className={` w-5 h-5 inline-flex items-center justify-center p-4 rounded-full  ${
                   currentStepIndex + 1 === 4
-                    ? "bg-pastel-blue"
+                    ? "bg-pastel-blue text-marine-blue"
                     : "bg-none text-white border"
                 }  font-bold text-sm `}
               >
@@ -93,7 +93,7 @@ function App() {
           </div>
         </div>
         {/* form */}
-        <div className="px-[min(3vw,8em)] mt-[min(2vw,4em)]  h-full mx-auto w-full  max-w[560px] sm:bg-transparent  bg-[#F0F8FF]">
+        <div className="px-[min(3vw,8em)] mt-[min(2vw,4em)]  h-full mx-auto w-full  max-w[560px] sm:bg-transparent  mb-8 sm:mb-0 bg-[#F0F8FF]">
           <form className=" flex flex-col gap-12  w-full h-full sm:px-4">
             {/* <PersonalInfo /> */}
             <SelectPlan />

@@ -14,21 +14,21 @@ const PersonalInfo = () => {
         <input
           type="text"
           required
-          className="border  px-3 py-2 placeholder:text-xs placeholder:font-bold rounded-md mt-1"
+          className="border bg-white  px-3 py-2 placeholder:text-xs placeholder:font-bold rounded-md mt-1"
           placeholder="e.g. Stephen King"
         />
         <label className=" text-marine-blue mt-4 text-xs">Email Address</label>
         <input
           type="email"
           required
-          className="border  px-3 py-2 placeholder:text-xs placeholder:font-bold rounded-md mt-1 "
+          className="border bg-white  px-3 py-2 placeholder:text-xs placeholder:font-bold rounded-md mt-1 "
           placeholder="e.g. Stephenking@lorem.com"
         />
         <label className=" text-marine-blue mt-4 text-xs">Phone Number</label>
         <input
           type="tel"
           required
-          className="border  px-3 py-2 placeholder:text-xs placeholder:font-bold rounded-md mt-1"
+          className="border  bg-ma px-3 py-2 placeholder:text-xs bg-white placeholder:font-bold rounded-md mt-1"
           placeholder="e.g. +1 234 567 890"
         />
       </div>
