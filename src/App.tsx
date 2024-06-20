@@ -101,9 +101,14 @@ function App() {
             {/* <SelectPlan /> */}
             {/* <Addons /> */}
             <Summary />
-            <button className=" mt-[min(5vw,4em)]  ml-auto bg-marine-blue hover:bg-blue-800 font-semibold text-white w-fit px-6 py-2 mb-2 rounded-md">
-              Next Step
-            </button>
+            <div className="mt-[min(5vw,4em)] mb-2  flex justify-between">
+              <button className="px-6 py-2 font-semibold  hover:text-marine-blue text-cool-gray">
+                Go Back
+              </button>
+              <button className="px-6 py-2 ml-auto font-semibold text-white rounded-md bg-marine-blue hover:bg-blue-800 w-fit">
+                Next Step
+              </button>
+            </div>
           </form>
         </div>
       </div>
