@@ -2,14 +2,19 @@ import images from "index.js";
 import Addons from "./components/Addons.js";
 import PersonalInfo from "./components/PersonalInfo.js";
 import SelectPlan from "./components/SelectPlan.js";
+import SubscriptionMessage from "./components/SubscriptionMessage.js";
 import Summary from "./components/Summary.js";
 import { useMultiStepForm } from "./utils/useMultiStepForm.js";
 
 function App() {
-  const { steps, currentStepIndex } = useMultiStepForm([
-    <div>ONe</div>,
-    <div>two</div>,
-  ]);
+  const { steps, currentStepIndex, step, isFirstStep, next, back } =
+    useMultiStepForm([
+      <PersonalInfo />,
+      <SelectPlan />,
+      <Addons />,
+      <Summary />,
+      <SubscriptionMessage />,
+    ]);
   return (
     <section className="grid bg-magnolia sm:h-screen sm:place-items-center">
       <div className="font-ubuntu sm:flex max-h-[568px] justify-center relative sm:p-4 sm:bg-white rounded-xl">
@@ -97,15 +102,23 @@ function App() {
         {/* form */}
         <div className="px-[min(3vw,8em)] mt-[min(2vw,4em)]  h-full mx-auto w-full  max-w[560px] sm:bg-transparent  mb-8 sm:mb-0 bg-[#F0F8FF]">
           <form className="flex flex-col w-full h-full gap-12 sm:px-4">
-            {/* <PersonalInfo /> */}
-            {/* <SelectPlan /> */}
-            {/* <Addons /> */}
-            <Summary />
+            {step}
+
             <div className="mt-[min(5vw,4em)] mb-2  flex justify-between">
-              <button className="px-6 py-2 font-semibold  hover:text-marine-blue text-cool-gray">
-                Go Back
-              </button>
-              <button className="px-6 py-2 ml-auto font-semibold text-white rounded-md bg-marine-blue hover:bg-blue-800 w-fit">
+              {!isFirstStep && (
+                <button
+                  onClick={back}
+                  type="button"
+                  className="px-6 py-2 font-semibold hover:text-marine-blue text-cool-gray"
+                >
+                  Go Back
+                </button>
+              )}
+              <button
+                onClick={next}
+                type="button"
+                className="px-6 py-2 ml-auto font-semibold text-white rounded-md bg-marine-blue hover:bg-blue-800 w-fit"
+              >
                 Next Step
               </button>
             </div>

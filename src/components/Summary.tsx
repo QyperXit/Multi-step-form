@@ -3,7 +3,7 @@ import React from "react";
 const Summary = () => {
   return (
     <>
-      <div className="flex w-full flex-col p-7  sm:bg-white bg-alabaster mt-[-5.15em] rounded-lg sm:rounded-none  sm:mt-0 sm:p-0 shadow-lg sm:shadow-none ">
+      <div className="flex md:w-[436px] max-w-full flex-col p-7  sm:bg-white bg-alabaster mt-[-5.15em] rounded-lg sm:rounded-none  sm:mt-0 sm:p-0 shadow-lg sm:shadow-none ">
         <h1 className="text-2xl font-bold text-marine-blue font-ubuntu text sm:text-4xl">
           Finishing up
         </h1>
