@@ -1,4 +1,3 @@
-import React from "react";
 import thankYou from "../assets/images/icon-thank-you.svg";
 
 const SubscriptionMessage = () => {

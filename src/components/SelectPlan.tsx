@@ -1,4 +1,3 @@
-import React from "react";
 import advanceIcon from "../assets/images/icon-advanced.svg";
 import arcadeIcon from "../assets/images/icon-arcade.svg";
 import proIcon from "../assets/images/icon-pro.svg";

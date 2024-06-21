@@ -1,4 +1,3 @@
-import images from "index.js";
 import Addons from "./components/Addons.js";
 import PersonalInfo from "./components/PersonalInfo.js";
 import SelectPlan from "./components/SelectPlan.js";
@@ -7,7 +6,7 @@ import Summary from "./components/Summary.js";
 import { useMultiStepForm } from "./utils/useMultiStepForm.js";
 
 function App() {
-  const { steps, currentStepIndex, step, isFirstStep, next, back } =
+  const { steps, currentStepIndex, step, isFirstStep, next, back, isLastStep } =
     useMultiStepForm([
       <PersonalInfo />,
       <SelectPlan />,
@@ -109,7 +108,9 @@ function App() {
                 <button
                   onClick={back}
                   type="button"
-                  className="px-6 py-2 font-semibold hover:text-marine-blue text-cool-gray"
+                  className={`px-6 py-2 ${
+                    currentStepIndex + 1 === 5 ? "invisible" : "visible"
+                  } font-semibold hover:text-marine-blue text-cool-gray`}
                 >
                   Go Back
                 </button>
@@ -117,9 +118,11 @@ function App() {
               <button
                 onClick={next}
                 type="button"
-                className="px-6 py-2 ml-auto font-semibold text-white rounded-md bg-marine-blue hover:bg-blue-800 w-fit"
+                className={`px-6 py-2 ml-auto ${
+                  currentStepIndex + 1 === 5 ? "invisible" : "visible"
+                } font-semibold text-white rounded-md bg-marine-blue hover:bg-blue-800 w-fit`}
               >
-                Next Step
+                {isLastStep ? "Continue" : "Next Step"}
               </button>
             </div>
           </form>
