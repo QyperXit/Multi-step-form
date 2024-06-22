@@ -37,7 +37,7 @@ function App() {
       <SelectPlan {...formData} updateFields={updateFields} />,
       <Addons {...formData} updateFields={updateFields} />,
       <Summary {...formData} updateFields={updateFields} />,
-      <SubscriptionMessage {...formData} />,
+      <SubscriptionMessage {...formData} updateFields={updateFields} />,
     ]);
 
   function onSubmit(e: FormEvent) {
