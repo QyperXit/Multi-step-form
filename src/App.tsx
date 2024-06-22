@@ -1,3 +1,4 @@
+import { FormEvent, useState } from "react";
 import Addons from "./components/Addons.js";
 import PersonalInfo from "./components/PersonalInfo.js";
 import SelectPlan from "./components/SelectPlan.js";
@@ -5,15 +6,42 @@ import SubscriptionMessage from "./components/SubscriptionMessage.js";
 import Summary from "./components/Summary.js";
 import { useMultiStepForm } from "./utils/useMultiStepForm.js";
 
+type FormData = {
+  firstName: string;
+  email: string;
+  number: string;
+  plan: string;
+  subType: boolean;
+};
+
+const INITIAL_DATA: FormData = {
+  firstName: "",
+  email: "",
+  number: "",
+  plan: "",
+  subType: "",
+};
+
 function App() {
+  const [formData, setFormData] = useState(INITIAL_DATA);
+  function updateFields(fields: Partial<FormData>) {
+    setFormData((prev) => {
+      return { ...prev, ...fields };
+    });
+  }
   const { steps, currentStepIndex, step, isFirstStep, next, back, isLastStep } =
     useMultiStepForm([
-      <PersonalInfo />,
-      <SelectPlan />,
-      <Addons />,
-      <Summary />,
-      <SubscriptionMessage />,
+      <PersonalInfo {...formData} updateFields={updateFields} />,
+      <SelectPlan {...formData} updateFields={updateFields} />,
+      <Addons {...formData} updateFields={updateFields} />,
+      <Summary {...formData} updateFields={updateFields} />,
+      <SubscriptionMessage {...formData} />,
     ]);
+
+  function onSubmit(e: FormEvent) {
+    e.preventDefault();
+    next();
+  }
   return (
     <section className="grid bg-magnolia sm:h-screen sm:place-items-center">
       <div className="font-ubuntu sm:flex max-h-[568px] justify-center relative sm:p-4 sm:bg-white rounded-xl">
@@ -100,7 +128,10 @@ function App() {
         </div>
         {/* form */}
         <div className="px-[min(3vw,8em)] mt-[min(2vw,4em)]  h-full mx-auto w-full  max-w[560px] sm:bg-transparent  mb-8 sm:mb-0 bg-[#F0F8FF]">
-          <form className="flex flex-col w-full h-full gap-12 sm:px-4">
+          <form
+            onSubmit={onSubmit}
+            className="flex flex-col w-full h-full gap-12 sm:px-4"
+          >
             {step}
 
             <div className="mt-[min(5vw,4em)] mb-2  flex justify-between">
@@ -116,8 +147,7 @@ function App() {
                 </button>
               )}
               <button
-                onClick={next}
-                type="button"
+                type="submit"
                 className={`px-6 py-2 ml-auto ${
                   currentStepIndex + 1 === 5 ? "invisible" : "visible"
                 } font-semibold text-white rounded-md bg-marine-blue hover:bg-blue-800 w-fit`}

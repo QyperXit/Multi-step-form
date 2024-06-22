@@ -1,4 +1,19 @@
-const PersonalInfo = () => {
+type UserData = {
+  firstName: string;
+  email: string;
+  number: string;
+};
+
+type PersonalInfoProps = UserData & {
+  updateFields: (fields: Partial<UserData>) => void;
+};
+
+const PersonalInfo = ({
+  firstName,
+  email,
+  number,
+  updateFields,
+}: PersonalInfoProps) => {
   return (
     <>
       <div className="flex flex-col p-7 sm:bg-white bg-alabaster mt-[-5.15em] rounded-lg sm:rounded-none  sm:mt-0 sm:p-0 shadow-lg sm:shadow-none">
@@ -13,6 +28,8 @@ const PersonalInfo = () => {
           type="text"
           required
           autoFocus
+          value={firstName}
+          onChange={(e) => updateFields({ firstName: e.target.value })}
           className="px-3 py-2 mt-1 bg-white border rounded-md placeholder:text-xs placeholder:font-bold"
           placeholder="e.g. Stephen King"
         />
@@ -20,6 +37,8 @@ const PersonalInfo = () => {
         <input
           type="email"
           required
+          value={email}
+          onChange={(e) => updateFields({ email: e.target.value })}
           className="px-3 py-2 mt-1 bg-white border rounded-md placeholder:text-xs placeholder:font-bold "
           placeholder="e.g. Stephenking@lorem.com"
         />
@@ -27,6 +46,8 @@ const PersonalInfo = () => {
         <input
           type="tel"
           required
+          value={number}
+          onChange={(e) => updateFields({ number: e.target.value })}
           className="px-3 py-2 mt-1 bg-white border rounded-md bg-ma placeholder:text-xs placeholder:font-bold"
           placeholder="e.g. +1 234 567 890"
         />
