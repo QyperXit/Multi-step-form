@@ -11,7 +11,8 @@ type FormData = {
   email: string;
   number: string;
   plan: string;
-  subType: boolean;
+  isYearly: boolean;
+  addons: string[];
 };
 
 const INITIAL_DATA: FormData = {
@@ -19,7 +20,8 @@ const INITIAL_DATA: FormData = {
   email: "",
   number: "",
   plan: "",
-  subType: "",
+  isYearly: "",
+  addons: [],
 };
 
 function App() {
