@@ -63,6 +63,7 @@ const Addons: React.FC<AddonsProps> = ({ addons, isYearly, updateFields }) => {
           >
             <input
               type="checkbox"
+              autoFocus
               checked={addons.includes(addon.id)}
               onChange={() => handleCheckboxChange(addon.id)}
               className="checkbox checkbox-sm [--chkbg:theme(colors.indigo.600)] [--chkfg:white]"

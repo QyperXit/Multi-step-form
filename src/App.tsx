@@ -19,9 +19,9 @@ const INITIAL_DATA: FormData = {
   firstName: "",
   email: "",
   number: "",
-  plan: "",
-  isYearly: "",
-  addons: [],
+  plan: "Pro",
+  isYearly: false,
+  addons: ["online_service"],
 };
 
 function App() {
