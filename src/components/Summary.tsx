@@ -57,7 +57,7 @@ const Summary: React.FC<SummaryProps> = ({
                 {plan} ({isYearly ? "Yearly" : "Monthly"})
               </h2>
               <p
-                className="text-sm hover:underline hover:cursor-pointer text-purplish-blue"
+                className="text-sm cursor-pointer hover:underline text-purplish-blue"
                 onClick={handlePlanChange}
               >
                 Change
