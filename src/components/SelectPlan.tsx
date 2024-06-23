@@ -47,10 +47,10 @@ const SelectPlan: React.FC<SelectPlanProps> = ({
         {plans.map((planItem) => (
           <div
             key={planItem.name}
-            className={`flex items-center flex-grow gap-3 p-3 border rounded-md sm:flex-col sm:gap-0 sm:items-start basis-24 cursor-pointer transition-colors duration-200 ${
+            className={`flex items-center flex-grow gap-3 p-3 border rounded-md sm:flex-col sm:gap-0 sm:items-start basis-24 cursor-pointer  duration-200 ${
               plan === planItem.name
-                ? "border-marine-blue bg-alabaster"
-                : "border-light-gray hover:border-marine-blue"
+                ? "border-purplish-blue bg-alabaster"
+                : "border-light-gray hover:border-purplish-blue"
             }`}
             onClick={() => handleSelectPlan(planItem.name)}
           >

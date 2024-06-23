@@ -150,9 +150,13 @@ function App() {
               )}
               <button
                 type="submit"
-                className={`px-6 py-2 ml-auto ${
+                className={`px-6 py-3 ml-auto ${
                   currentStepIndex + 1 === 5 ? "invisible" : "visible"
-                } font-semibold text-white rounded-md bg-marine-blue hover:bg-blue-800 w-fit`}
+                } font-semibold text-white rounded-md ${
+                  isLastStep ? "bg-purplish-blue" : "bg-marine-blue"
+                } ${
+                  isLastStep ? "hover:bg-[#473dffb2]" : "hover:bg-blue-800"
+                } w-fit`}
               >
                 {isLastStep ? "Confirm" : "Next Step"}
               </button>
