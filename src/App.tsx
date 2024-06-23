@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import { FormEvent, useState } from "react";
+
 import Addons from "./components/Addons.js";
 import PersonalInfo from "./components/PersonalInfo.js";
 import SelectPlan from "./components/SelectPlan.js";
@@ -44,6 +46,13 @@ function App() {
     e.preventDefault();
     next();
   }
+
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+    exit: { opacity: 0 },
+  };
+
   return (
     <section className="grid bg-magnolia sm:h-screen sm:place-items-center">
       <div className="font-ubuntu sm:flex max-h-[568px] justify-center relative sm:p-4 sm:bg-white rounded-xl">
@@ -134,7 +143,17 @@ function App() {
             onSubmit={onSubmit}
             className="flex flex-col w-full h-full gap-12 sm:px-4"
           >
-            {step}
+            {/* {step} */}
+            <motion.div
+              key={currentStepIndex}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              variants={variants}
+              transition={{ duration: 0.5 }}
+            >
+              {step}
+            </motion.div>
 
             <div className="mt-[min(5vw,2em)] mb-2  flex justify-between">
               {!isFirstStep && (

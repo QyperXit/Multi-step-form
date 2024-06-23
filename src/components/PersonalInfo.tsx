@@ -30,7 +30,7 @@ const PersonalInfo = ({
           autoFocus
           value={firstName}
           onChange={(e) => updateFields({ firstName: e.target.value })}
-          className="px-3 py-2 mt-1 bg-white border rounded-md placeholder:text-xs placeholder:font-bold"
+          className="px-3 py-2 mt-1 bg-white border rounded-md placeholder:text-xs placeholder:font-bold text-marine-blue"
           placeholder="e.g. Stephen King"
         />
         <label className="mt-4 text-xs text-marine-blue">Email Address</label>
@@ -39,7 +39,7 @@ const PersonalInfo = ({
           required
           value={email}
           onChange={(e) => updateFields({ email: e.target.value })}
-          className="px-3 py-2 mt-1 bg-white border rounded-md placeholder:text-xs placeholder:font-bold "
+          className="px-3 py-2 mt-1 bg-white border rounded-md placeholder:text-xs placeholder:font-bold text-marine-blue"
           placeholder="e.g. Stephenking@lorem.com"
         />
         <label className="mt-4 text-xs text-marine-blue">Phone Number</label>
@@ -48,7 +48,7 @@ const PersonalInfo = ({
           required
           value={number}
           onChange={(e) => updateFields({ number: e.target.value })}
-          className="px-3 py-2 mt-1 bg-white border rounded-md bg-ma placeholder:text-xs placeholder:font-bold"
+          className="px-3 py-2 mt-1 bg-white border rounded-md bg-ma placeholder:text-xs placeholder:font-bold text-marine-blue"
           placeholder="e.g. +1 234 567 890"
         />
       </div>
