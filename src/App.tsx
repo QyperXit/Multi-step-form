@@ -136,7 +136,7 @@ function App() {
           >
             {step}
 
-            <div className="mt-[min(5vw,4em)] mb-2  flex justify-between">
+            <div className="mt-[min(5vw,2em)] mb-2  flex justify-between">
               {!isFirstStep && (
                 <button
                   onClick={back}
@@ -154,7 +154,7 @@ function App() {
                   currentStepIndex + 1 === 5 ? "invisible" : "visible"
                 } font-semibold text-white rounded-md bg-marine-blue hover:bg-blue-800 w-fit`}
               >
-                {isLastStep ? "Continue" : "Next Step"}
+                {isLastStep ? "Confirm" : "Next Step"}
               </button>
             </div>
           </form>
