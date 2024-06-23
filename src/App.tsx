@@ -33,13 +33,13 @@ function App() {
       return { ...prev, ...fields };
     });
   }
-  const { steps, currentStepIndex, step, isFirstStep, next, back, isLastStep } =
+  const { currentStepIndex, step, isFirstStep, next, back, isLastStep } =
     useMultiStepForm([
       <PersonalInfo {...formData} updateFields={updateFields} />,
       <SelectPlan {...formData} updateFields={updateFields} />,
       <Addons {...formData} updateFields={updateFields} />,
       <Summary {...formData} updateFields={updateFields} />,
-      <SubscriptionMessage {...formData} updateFields={updateFields} />,
+      <SubscriptionMessage />,
     ]);
 
   function onSubmit(e: FormEvent) {

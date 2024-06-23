@@ -19,7 +19,10 @@ const Summary: React.FC<SummaryProps> = ({
     Pro: { monthly: 15, yearly: 150 },
   };
 
-  const addonsList = {
+  const addonsList: Record<
+    string,
+    { name: string; monthly: number; yearly: number }
+  > = {
     online_service: { name: "Online service", monthly: 1, yearly: 10 },
     larger_storage: { name: "Larger storage", monthly: 2, yearly: 20 },
     customizable_profile: {
@@ -30,11 +33,10 @@ const Summary: React.FC<SummaryProps> = ({
   };
 
   const planPrice = isYearly ? plans[plan].yearly : plans[plan].monthly;
-  const addonsPrices = addons.reduce(
-    (total, addon) =>
-      total + (isYearly ? addonsList[addon].yearly : addonsList[addon].monthly),
-    0
-  );
+  const addonsPrices = addons.reduce((total, addon) => {
+    const addonDetails = addonsList[addon]; // Safe access
+    return total + (isYearly ? addonDetails.yearly : addonDetails.monthly);
+  }, 0);
   const totalPrice = planPrice + addonsPrices;
 
   const handlePlanChange = () => {

@@ -33,14 +33,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-_Note: Replace this with your own screenshot once it's available._
+![video](./public/gif-exmaple.gif)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://multiform-step-frontmentor.netlify.app/)
 
 ## My process
 
